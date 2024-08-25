@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+class WaterBottle_Driver
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+		System.out.println("Enter what you want...");
+		System.out.println("To see water bottle features PRESS:1\n To Drink Water PRESS:2\n To fill water PRESS:3");
+		System.out.println("Enter 0 to exit");
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+		int n;
+
+		WaterBottle w = new WaterBottle();
+		w.name="Bottle";
+		w.color="White";
+		w.type="Copper";
+		w.size=5;
+
+		do
+		{
+			System.out.println("\n\nEnter 0 to exit");
+			n = sc.nextInt();
+
+			switch(n)
+				{
+				case 1:
+					w.display();
+				break;
+				case 2:
+					w.drinkWater();
+				break;
+				case 3:
+					w.fillWater();
+				break;
+				default:
+					if(n!=0)
+					System.out.println("Enter a valid task...");
+					w.display();
+				}
+		}while(n!=0);
+	}
+}

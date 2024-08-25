@@ -1,0 +1,27 @@
+class Mobile 
+{
+	String name,color;
+	int ram, rom;
+	public void add(String name, String color, int ram, int rom)
+	{
+		this.name=name;
+		this.color=color;
+		this.ram= ram;
+		this.rom=rom;
+	}
+	public void display()
+	{
+		System.out.println(name);
+		System.out.println(color);
+		System.out.println(ram);
+		System.out.println(rom);
+	}
+	public static void main(String[] args) 
+	{
+		Mobile m= new Mobile();
+		m.add("Vivo","Black",4,128);
+		//m.display();
+		m.add("Realme","Blue",6,128);
+		m.display();
+	}
+}
